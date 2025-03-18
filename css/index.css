@@ -1,0 +1,164 @@
+html
+{
+    height: 100%;
+}
+body
+{
+    height: 100%;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+*,::before,::after
+{
+    box-sizing: border-box;
+}
+
+a
+{
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+li
+{
+    list-style: none;
+}
+
+:root
+{
+    --main-color: rgb(48, 46, 46);
+}
+.center
+{
+    margin: 0 auto;
+    width: 70%;
+}
+header
+{
+
+    height: 55%;
+    background-image: url('https://www.w3schools.com/w3images/parallax1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-size: 18px;
+}
+header::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(202, 197, 197, 0.349);
+    z-index: 1; 
+    pointer-events: none
+}
+header .container
+{
+display: flex;
+justify-content: space-between;
+}
+header p
+{
+    text-transform: uppercase;
+    font-size: 35px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 3px 10px;
+    letter-spacing: 5px;
+    transform: translate(-50%, -50%);
+    min-width: 390px;
+}
+header .links
+{
+    display: flex;
+    height: 50px;
+    z-index: 0; /* Lowered z-index to place it behind ::before */
+    position: relative; 
+}
+header .links li
+{
+    margin-right: 10px;
+    padding: 11px;
+}
+header .links li:hover
+{
+    color: black;
+    background-color: #fff;
+}
+header .links li i
+{
+    margin-right: 4px;
+    color: var(--main-color);
+}
+header .search
+{
+    padding: 10px;
+}
+header .search i
+{
+    font-size: 1.2em;
+}
+.aboutme
+{
+    padding: 50px 0;
+}
+.aboutme p
+{
+    color: var(--main-color);
+    text-align: center;
+}
+
+.aboutme p:nth-child(1)
+{
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+.aboutme p:nth-child(2)
+{
+    margin-bottom: 10px;
+}
+.aboutme p:nth-child(3)
+{
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.aboutme-container
+{
+    display: flex;
+    justify-content: space-around;
+}
+.aboutme-container .photo .name
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.aboutme-container .photo .name i
+{
+    margin-right: 5px;
+}
+.aboutme-container .photo img
+{
+    opacity: .6;
+    width: 500px;
+}
+.aboutme-container .photo img:hover
+{
+    opacity: 1;
+}
+.aboutme-container .text
+{
+    line-height: 1.7;
+    min-width: 300px;
+}
