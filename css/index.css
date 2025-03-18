@@ -31,12 +31,12 @@ li
 
 :root
 {
-    --main-color: rgb(48, 46, 46);
+    --main-color: #616161;
 }
 .center
 {
     margin: 0 auto;
-    width: 70%;
+    width: 60%;
 }
 header
 {
@@ -122,22 +122,22 @@ header .search i
 .aboutme p:nth-child(1)
 {
     font-size: 27px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .aboutme p:nth-child(2)
 {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .aboutme p:nth-child(3)
 {
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .aboutme-container
 {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 .aboutme-container .photo .name
 {
@@ -151,7 +151,7 @@ header .search i
 .aboutme-container .photo img
 {
     opacity: .6;
-    width: 500px;
+    min-width: 400px;
 }
 .aboutme-container .photo img:hover
 {
@@ -160,5 +160,167 @@ header .search i
 .aboutme-container .text
 {
     line-height: 1.7;
-    min-width: 300px;
+}
+
+.progress
+{
+    padding: 50px 0;
+}
+
+.progress .row
+{
+    margin-bottom: 20px;
+}
+.progress .row .text
+{
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: #616161;
+}
+.progress .row .progress_bar
+{
+    background-color: #616161;
+    color: white;
+    height: 20px;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    margin: 10px;
+}
+.progress .row .progress_bar span
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bar1
+{
+    width: 90%;
+}
+.bar2
+{
+    width: 85%;
+}
+.bar3
+{
+    width: 75%;
+}
+
+.our-numbers
+{
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-around;
+
+    color: white;
+    padding: 20px 0;
+}
+.our-numbers .number
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.our-numbers .number span:nth-child(1)
+{
+    font-size: 28px;
+}
+
+.portfolio
+{
+    padding: 200px 0;
+    background-image: url("https://www.w3schools.com/w3images/parallax2.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.portfolio::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(202, 197, 197, 0.349);
+    z-index: 1; 
+}
+.portfolio p
+{
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    letter-spacing: 10px;
+    font-weight: 600;
+}
+.my-work
+{
+    padding: 100px 0;
+}
+.my-work p
+{
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+.my-work p:first-child
+{
+    font-size: 30px;
+}
+.my-work .img-container
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+}
+.my-work .img-container img
+{
+    width: 100%;
+}
+.my-work .img-container img:hover
+{
+    opacity: .5;
+}
+
+.my-work button
+{
+    margin: 50px auto 0;
+    display: block;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+.my-work button:hover
+{
+    background-color: #817f7f;
+    color: white;
+}
+.contact
+{
+    background-image: url("https://www.w3schools.com/w3images/parallax3.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+    position: relative;
+}
+.contact::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(202, 197, 197, 0.349);
+    z-index: 1; 
+}
+.contact p
+{
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 10px;
+    text-align: center;
+    font-weight: 900;
 }
