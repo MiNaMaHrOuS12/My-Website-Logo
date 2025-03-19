@@ -5,6 +5,7 @@ html
 body
 {
     height: 100%;
+    font-family: "Lato", sans-serif;
 }
 
 *
@@ -36,7 +37,7 @@ li
 .center
 {
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
 }
 header
 {
@@ -86,6 +87,11 @@ header .links
     z-index: 0; /* Lowered z-index to place it behind ::before */
     position: relative; 
 }
+header .menu
+{
+    display: none;
+}
+
 header .links li
 {
     margin-right: 10px;
@@ -100,6 +106,19 @@ header .links li i
 {
     margin-right: 4px;
     color: var(--main-color);
+}
+@media (max-width:700px) {
+    header .links
+    {
+        display: none;
+    }
+    header .menu
+    {
+        display: block;
+        margin: 10px;
+        color: var(--main-color);
+        font-size: 1.2em;
+    }
 }
 header .search
 {
@@ -161,7 +180,26 @@ header .search i
 {
     line-height: 1.7;
 }
-
+@media (max-width:900px)
+{
+    .aboutme-container .text
+    {
+        display: none;
+    }
+    .whereIwork .section-container
+    {
+        flex-direction: column;
+    }
+    .whereIwork .section-container .image
+    {
+        width:100%;
+        margin-bottom: 20px;
+    }
+    .whereIwork .section-container .contact-info
+    {
+        width: 100%;
+    }
+}
 .progress
 {
     padding: 50px 0;
@@ -212,9 +250,34 @@ header .search i
     background-color: var(--main-color);
     display: flex;
     justify-content: space-around;
-
     color: white;
     padding: 20px 0;
+}
+@media (max-width:700px)
+{
+    .our-numbers
+    {
+        flex-direction: column;
+    }
+    .our-numbers .number
+    {
+        margin-bottom: 20px;
+    }
+    .our-numbers .number span:nth-child(1)
+    {
+        font-size: 40px !important;
+    }
+    .my-work .center .img-container {
+        grid-template-columns: 1fr; /* Single column */
+        grid-auto-rows: minmax(200px, auto);
+        gap: 8px; /* Optional: Adjust the gap as needed */
+    }
+    
+    .my-work .img-container img {
+        width: 100%; /* Full width of the container */
+        height: 100%; /* Full height of the grid cell */
+        object-fit: cover; /* Maintain aspect ratio while covering the cell */
+    }
 }
 .our-numbers .number
 {
@@ -273,6 +336,7 @@ header .search i
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 8px;
+    cursor: pointer;
 }
 .my-work .img-container img
 {
@@ -323,4 +387,159 @@ header .search i
     letter-spacing: 10px;
     text-align: center;
     font-weight: 900;
+}
+
+.whereIwork
+{
+    padding: 100px 0;
+}
+
+.whereIwork .text p
+{   
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--main-color);
+}
+
+.whereIwork p:first-child
+{
+    font-size: 30px;
+}
+.whereIwork .section-container
+{
+    width: 100%;
+    display: flex;
+}
+.whereIwork .image
+{
+    width:33.33333%;
+    margin-right: 30px;
+}
+.whereIwork .image img
+{
+    width: 100%;
+}
+.whereIwork .section-container .contact-info
+{
+    width:66.66666%;
+}
+.whereIwork .section-container .contact-info ul
+{
+    margin-bottom: 20px;
+}
+.whereIwork .section-container .contact-info ul li
+{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.whereIwork .section-container .contact-info ul li a
+{
+    color: black;
+}
+.whereIwork .section-container .contact-info ul i
+{
+    margin-right: 16px;
+    color: var(--main-color);
+}
+.whereIwork .section-container .contact-info ul i:hover
+{
+    color: black;
+}
+.whereIwork .section-container .contact-info p:first-of-type
+{
+    color: var(--main-color);
+    font-size: 20px;
+}
+@media (min-width:601px) {
+    .inputs
+    {
+        display: flex;
+    }
+    .whereIwork .section-container .contact-info form .w3hall
+    {
+        width:50%;
+        margin:5px 5px 5px 0;
+    }
+    .whereIwork .section-container .contact-info form .w3hall
+    {
+        width:50%;
+        margin:5px 5px 5px 0;
+    }
+    .whereIwork .section-container .contact-info form .w3hall input
+    {
+        padding: 10px;
+        width: 100%;
+    }   
+
+}
+    textarea
+    {
+        width: 100%;
+        padding: 10px;
+        resize: none;
+    }
+@media (max-width:601px)
+{
+    .whereIwork .section-container .contact-info form .w3hall
+    {
+        width:50%;
+        margin:5px 0;
+    }
+    .whereIwork .section-container .contact-info form .w3hall input
+    {
+        padding: 10px;
+        width: 100%;
+    }   
+}
+
+form button
+{
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 7px;
+    float: right;
+    border-radius: 7px;
+}
+form button:hover
+{
+    background-color: var(--main-color);
+    color: black;
+}
+
+footer
+{
+    padding: 50px 0 100px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    opacity: .6;
+}
+footer:hover
+{
+    opacity: 1;
+}
+footer:hover .toTheTop
+{
+    color: black;
+}
+footer .toTheTop
+{
+    margin-bottom: 30px;
+    font-size: 20px;
+    background-color: #fff;
+    display: inline-block;
+    padding: 10px 5px;
+    border-radius: 7px;
+}
+footer .toTheTop:hover
+{
+
+}
+footer .toTheTop i
+{
+    margin-right: 10px;
+    color: var(--main-color);
 }
