@@ -169,7 +169,7 @@ header .search i
 .aboutme-container .photo img
 {
     opacity: .6;
-    min-width: 400px;
+    max-width: 350px;
 }
 .aboutme-container .photo img:hover
 {
