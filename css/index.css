@@ -14,7 +14,7 @@ body
     padding: 0;
 }
 
-*,::before,::after
+*,*:before,*:after
 {
     box-sizing: border-box;
 }
@@ -156,7 +156,6 @@ header .search i
 .aboutme-container
 {
     display: flex;
-    /* justify-content: space-around; */
 }
 .aboutme-container .photo .name
 {
@@ -268,15 +267,15 @@ header .search i
         font-size: 40px !important;
     }
     .my-work .center .img-container {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr;
         grid-auto-rows: minmax(200px, auto);
-        gap: 8px; /* Optional: Adjust the gap as needed */
+        gap: 8px;
     }
     
     .my-work .img-container img {
-        width: 100%; /* Full width of the container */
-        height: 100%; /* Full height of the grid cell */
-        object-fit: cover; /* Maintain aspect ratio while covering the cell */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 .our-numbers .number
