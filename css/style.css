@@ -78,7 +78,7 @@ header p
     padding: 3px 10px;
     letter-spacing: 5px;
     transform: translate(-50%, -50%);
-    min-width: 390px;
+    text-wrap: nowrap;
 }
 header .links
 {
