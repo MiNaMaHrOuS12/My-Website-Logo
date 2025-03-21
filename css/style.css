@@ -79,6 +79,14 @@ header p
     letter-spacing: 5px;
     transform: translate(-50%, -50%);
     text-wrap: nowrap;
+    overflow: hidden;
+}
+@media (max-width: 390px) {
+    header p
+    {
+        overflow: visible;
+        font-size: 20px;
+    }
 }
 header .links
 {
@@ -169,7 +177,7 @@ header .search i
 .aboutme-container .photo img
 {
     opacity: .6;
-    max-width: 350px;
+    max-width: 300px;
 }
 .aboutme-container .photo img:hover
 {
@@ -184,6 +192,14 @@ header .search i
     .aboutme-container .text
     {
         display: none;
+    }
+    .aboutme-container 
+    {
+        flex-direction: column;
+    }
+    .aboutme-container .photo
+    {
+        text-align: center;
     }
     .whereIwork .section-container
     {
